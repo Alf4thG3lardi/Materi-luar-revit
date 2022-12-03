@@ -1,0 +1,83 @@
+div {
+    width: 80%;
+    margin: auto;
+}
+.buah {
+    margin-top: auto;
+    width: 600px;
+}
+.logo {
+    width: 200px;
+}
+.penting {
+    font-size: larger;
+    font-style: italic;
+}
+p {
+    background-color: whitesmoke;
+    border: 1px solid black;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: white;
+    background-color: brown;
+    width: fit-content;
+}
+h2 {
+    margin-top: auto + 10px;
+    padding: 10px;
+    color: white;
+    background-color: brown;
+    width: max-content;
+}
+th {
+    background-color: yellow;
+}
+ul {
+    background: rgb(105, 105, 105);
+    list-style: none;
+    margin: auto;
+    padding-left: 0%;
+}
+ul li {
+    color: white;
+    background: rgb(105, 105, 105);
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+li a {
+    color: white;
+    text-decoration: none;
+}
+ul li ul {
+    background: rgb(105, 105, 105);
+    visibility: hidden;
+    transition:0.5s;
+    position: absolute;
+    margin-top: 10px;
+    display: none;
+}
+ul li:hover {
+    background: brown;
+    cursor: pointer;
+}
+ul li:hover > ul,
+ul li ul:hover {
+    visibility: visible;
+    display: block;
+}
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url("../Images/ezgif.com-gif-maker.jpg");
+        background-repeat: repeat-y;
+        background-size: cover;
+    }
+}
