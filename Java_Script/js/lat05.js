@@ -1,17 +1,22 @@
-let tampil = document.querySelector("#belajar");
+function perkali(a, b) {
+    return a * b;
+}
+console.log(perkali(2, 2));
 
-function zodiac() {
+let kali = (a, b) => a * b;
+
+console.log(kali(4, 2));
+
+let zodiac = () => {
     let bln = document.getElementsByName("bln")[0].value;
     let tgl = document.getElementsByName("tgl")[0].value;
-
-    let hasil = "invalid input";
+    let hasil = "invalid";
     if (bln > 0 && bln < 13 && tgl > 0 && tgl < 32) {
-        hasil = "zodiac  null";
         if (bln == 1 && tgl < 32) {
             hasil = "capricorn";
             if (tgl > 21) {
                 hasil = "aquarius";
-            }Java_Script
+            }
         }
         if (bln == 2 && tgl < 30) {
             hasil = "aquarius";
@@ -81,28 +86,24 @@ function zodiac() {
             } 
         }
     }
-    // console.log(hasil);
-
-    tampil.innerHTML=hasil;
+    document.querySelector('#belajar').innerHTML = hasil;
 }
 
-//TUGAS
+console.log(zodiac(1, 4));
 
-function lulus() {
-    let nilai = document.getElementById("nilai").value;
-    if (nilai >= 0 && nilai <= 100) {
-        if (nilai >= 80) {
-            tampil.innerHTML = "LULUS";
-        } else {
-            tampil.innerHTML = "GK LULUS";
-        }
-    } 
+let lulus = () => {
+    let nilai = document.getElementById('nilai').value;
+    hasil = nilai > 0 && nilai <= 100 ? nilai > 80 ? "lulus" : "gagal" : "invalid";
+    document.querySelector('#belajar').innerHTML = hasil;
 }
 
-function convert() {
+
+console.log(lulus(89));
+
+let convert = () => {
     let angka = document.getElementById("num").value;
-    function terbilang(angka) {
-    
+    let terbilang = (angka) => {
+
         var bilne=["","satu","dua","tiga","empat","lima","enam","tujuh","delapan","sembilan","sepuluh","sebelas"];
         if(angka < 12){
             return bilne[angka];
@@ -126,39 +127,17 @@ function convert() {
             return terbilang(Math.floor(angka/1000000000000))+" trilyun "+terbilang(angka%1000000000000);
         }    
     }
-    tampil.innerHTML = terbilang(angka);
+
+    document.querySelector('#belajar').innerHTML = terbilang(angka);
+    
 }
 
-function prima() {
+let prima = () => {
     let num = document.getElementById("number").value;
-    let pembagi = 0;
-    for (let i = 0; i <= num; i++) {
-        if (num % i == 0) {
-            pembagi++;
-        }
+    let bagi = 0;
+    for (let i = 1; i < num; i++) {
+        num % i == 0 ? bagi++ : null;
     }
-    if (pembagi == 2) {
-        tampil.innerHTML = "Prima";
-    } else {
-        tampil.innerHTML = "Bukan Prima";
-    }
+    bagi == 1 ? document.querySelector('#belajar').innerHTML = "Prima" : document.querySelector('#belajar').innerHTML = "Bukan Prima";
 }
-
-klik.onclick = function () {
-    hasil(69);
-}
-
-function hasil(a) {
-    tampil.innerHTML = a;
-}
-
-
-//Panggil function
-// tampil.innerHTML=terbilang(Angk
-
-
-
-// tampil.innerHTML= terbilang(678);
-// lulus(80);
-// zodiac(12, 29);
-// console.log(prima(3));
+// console.log(terbilang(546));
